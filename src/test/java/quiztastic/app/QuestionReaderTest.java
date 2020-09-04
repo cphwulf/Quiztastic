@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class QuestionReaderTest {
 
     @Test
-    void shouldReadSingleQuestion() {
+    void shouldReadSingleQuestion() throws IOException {
         String questionText = "100\tLAKES & RIVERS\tRiver mentioned most often in the Bible\tthe Jordan\n";
         QuestionReader reader = new QuestionReader(new StringReader(questionText));
         Question q = reader.readQuestion();
